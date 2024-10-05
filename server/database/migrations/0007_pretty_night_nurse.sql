@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `banned` integer DEFAULT false NOT NULL;

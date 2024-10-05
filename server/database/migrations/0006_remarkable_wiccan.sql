@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX `waitlist_email_unique` ON `waitlist` (`email`);

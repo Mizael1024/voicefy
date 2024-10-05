@@ -1,0 +1,56 @@
+{
+  "name": "supersaas-essentials",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "typecheck": "nuxt typecheck",
+    "db:generate": "drizzle-kit generate",
+    "db:deploy": "drizzle-kit push",
+    "format": "prettier --write .",
+    "generate:api": "node --experimental-modules scripts/generate-api.js"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^1.4.1",
+    "@nuxt/fonts": "^0.7.2",
+    "@nuxt/ui": "^2.18.4",
+    "@types/better-sqlite3": "^7.6.11",
+    "@vueuse/core": "^11.0.3",
+    "@vueuse/nuxt": "^11.0.3",
+    "drizzle-kit": "^0.24.2",
+    "drizzle-zod": "^0.5.1",
+    "nuxt": "^3.13.0",
+    "nuxt-auth-utils": "^0.3.5",
+    "simple-git-hooks": "^2.11.1"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "3.637.0",
+    "@aws-sdk/s3-request-presigner": "3.637.0",
+    "@github/webauthn-json": "^2.1.1",
+    "@lemonsqueezy/lemonsqueezy.js": "^3.2.0",
+    "@libsql/client": "^0.10.0",
+    "@paralleldrive/cuid2": "^2.2.2",
+    "@plunk/node": "^3.0.2",
+    "@simplewebauthn/browser": "^10.0.0",
+    "@simplewebauthn/server": "^10.0.1",
+    "@simplewebauthn/types": "^10.0.0",
+    "@t3-oss/env-nuxt": "^0.11.1",
+    "drizzle-orm": "^0.33.0",
+    "iron-webcrypto": "^1.2.1",
+    "nanoid": "^5.0.7",
+    "prettier-plugin-tailwindcss": "^0.6.6",
+    "radix-vue": "^1.9.5",
+    "resend": "^4.0.0",
+    "stripe": "^16.8.0",
+    "vue-sonner": "^1.1.5",
+    "zod": "^3.23.8"
+  },
+  "simple-git-hooks": {
+    "pre-push": "pnpm run format"
+  }
+}
